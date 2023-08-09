@@ -10,7 +10,7 @@ const projects_record = import.meta.glob('/src/data/projects/*.md', {
 import markdownit from 'markdown-it';
 const md = new markdownit();
 
-export const load = async (event) => {
+export const load = async (event: { params: { id: any; }; }) => {
 	const id = event.params.id;
 	const path = `/src/data/projects/${id}.md`;
 
