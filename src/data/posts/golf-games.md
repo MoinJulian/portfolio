@@ -117,6 +117,10 @@ Then the all the functions got inplemented, the basis of the game is stored in a
 <FourWinning {teams} />
 ```
 
+## BackEnd
+
+I recently added a backend with MongoDB Atlas, to have a user authentications and have different users, I then stored the game data in the localStorage, so if the user accidentally realoads the page or leaves it, to check or do something else, the game progress doesn't get lost. I'm currently trying to push the game data to the right user data in the mongoDB Atlas Database, which is difficultier the expected. So the user can log in and see all his saved games from all over the world.
+
 ## Used Packages
 
 I'm not using any extra packages currently except SASS and TypeScript, so I can write cleaner and better JavaScript code, as well as the style tags are very easy to read and safes time to write.
