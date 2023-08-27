@@ -7,6 +7,7 @@
 <h2>Expert Knowledge</h2>
 <ul>
 	<li>SvelteKit</li>
+	<li>MongoDB</li>
 	<li>JavaScript</li>
 	<li>HTML</li>
 	<li>CSS</li>
