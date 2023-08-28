@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-	<title>MoinJulian - {title}</title>
+	<title>Blog - {title}</title>
 </svelte:head>
 
 <GoBack />

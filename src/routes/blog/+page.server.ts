@@ -12,7 +12,7 @@ export const load = async () => {
 	const posts = [...unsorted_posts].sort((p, q) => q.published.getTime() - p.published.getTime());
 
 	const meta = {
-		title: 'Script Raccoon - Blog',
+		title: 'MoinJulian - Blog',
 		description: 'Some thoughts on web development'
 	};
 
