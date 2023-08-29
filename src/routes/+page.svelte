@@ -14,9 +14,6 @@
 	Here you find more <a href="/about">about myself</a> and my
 	<a href="/projects">personal projects</a>.
 </p>
-<p>
-	The Blog can be found <a href="https://blog.moinjulian.com" target="_blank">here</a>.
-</p>
 
 <div class="img">
 	<img src={logo} alt="" />
@@ -35,6 +32,6 @@
 	img {
 		width: 128px;
 		border-radius: 50%;
-		box-shadow: 0 0 2rem var(--light-color);
+		box-shadow: 0 0 0.5rem var(--shadow-color);
 	}
 </style>
