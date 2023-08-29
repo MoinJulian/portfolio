@@ -16,7 +16,7 @@ const posts_record = import.meta.glob('/src/data/posts/*.md', {
 	eager: true
 });
 
-export const load = async (event) => {
+export const load = async (event: { params: { id: any } }) => {
 	const id = event.params.id;
 	const path = `/src/data/posts/${id}.md`;
 

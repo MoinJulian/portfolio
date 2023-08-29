@@ -1,5 +1,5 @@
 <script lang="ts">
-	//import Controls from "$lib/components/Controls.svelte";
+	import Controls from '$lib/components/Controls.svelte';
 	import GoBack from '$lib/components/GoBack.svelte';
 
 	export let data;
@@ -15,7 +15,7 @@
 	<title>MoinJulian | {title}</title>
 </svelte:head>
 
-<GoBack />
+<Controls />
 
 <h1>
 	{title}
