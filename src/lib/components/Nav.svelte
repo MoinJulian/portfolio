@@ -11,7 +11,8 @@
 		faClipboardList,
 		faSection,
 		faKey,
-		faBook
+		faBook,
+		faBlog
 	} from '@fortawesome/free-solid-svg-icons';
 
 	type link = {
@@ -24,6 +25,7 @@
 		{ name: 'YouTube', href: '/youtube', icon: faYoutube },
 		{ name: 'Projects', href: '/projects', icon: faClipboardList },
 		{ name: 'About', href: '/about', icon: faCircleQuestion },
+		{ name: 'Blog', href: '/posts', icon: faBlog },
 		{ name: 'Imprint', href: '/imprint', icon: faSection },
 		{ name: 'Personal', href: '/personal', icon: faKey }
 	];
