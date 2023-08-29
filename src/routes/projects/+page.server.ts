@@ -9,9 +9,14 @@ export const load = async () => {
 		})
 	);
 
-	const projects = unsorted_projects.sort((p, q) => q.date.getTime() - p.date.getTime());
+	const projects = unsorted_projects
+		.filter((project) => project.updated instanceof Date)
+		.sort((p, q) => q.updated.getTime() - p.updated.getTime());
 
-	const year_list = unsorted_projects.map((p) => p.date.getFullYear());
+	const year_list = unsorted_projects
+		.filter((project) => project.updated instanceof Date)
+		.map((project) => project.updated.getFullYear());
+
 	const years = [...new Set(year_list)].sort();
 
 	const tag_list = projects.map((p) => p.tags).flat();

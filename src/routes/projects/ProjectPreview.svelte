@@ -13,6 +13,8 @@
 			<div>
 				<h2>{project.name}</h2>
 				<div class="teaser">{project.teaser}</div>
+				<div class="date">Updated: {project.updated.toLocaleDateString()}</div>
+				<div class="date">Published: {project.published.toLocaleDateString()}</div>
 				<div class="more">More...</div>
 			</div>
 			<div class="image-container">
@@ -33,6 +35,12 @@
 	.teaser {
 		color: var(--secondary-font-color);
 		margin-bottom: 0.5rem;
+	}
+
+	.date {
+		color: var(--secondary-font-color);
+		font-size: var(--tiny-font);
+		margin-bottom: 0rem;
 	}
 
 	.image-container {
