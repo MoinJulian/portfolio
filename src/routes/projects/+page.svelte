@@ -11,7 +11,7 @@
 		(project) =>
 			$active_filter.tags.every((tag) => project.tags.includes(tag)) &&
 			($active_filter.years.length == 0 ||
-				$active_filter.years.includes(project.date.getFullYear()))
+				$active_filter.years.includes(project.updated.getFullYear()))
 	);
 </script>
 
