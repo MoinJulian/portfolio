@@ -11,7 +11,6 @@
 		faClipboardList,
 		faSection,
 		faKey,
-		faBook,
 		faBlog
 	} from '@fortawesome/free-solid-svg-icons';
 
