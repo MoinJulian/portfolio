@@ -1,23 +1,22 @@
 import fm from 'front-matter';
 import { error } from '@sveltejs/kit';
-import type { post } from '../types';
-
-import { compose } from '$lib/shared/util';
+import type { posts } from '../types';
 import {
+	highlight_code,
 	add_ids_to_headings,
 	get_table_of_contents,
-	highlight_code,
 	render_formulas,
-	render_markdown,
-	transform_external_links
+	transform_external_links,
+	render_markdown
 } from '$lib/server';
+import { compose } from '$lib/shared/util';
 
 const posts_record = import.meta.glob('/src/data/posts/*.md', {
 	as: 'raw',
 	eager: true
 });
 
-export const load = async (event) => {
+export const load = async (event: { params: { id: any } }) => {
 	const id = event.params.id;
 	const path = `/src/data/posts/${id}.md`;
 
@@ -26,8 +25,8 @@ export const load = async (event) => {
 	}
 
 	const markdown = posts_record[path];
-	const { attributes: _attributes, body } = fm<Omit<post, 'id'>>(markdown);
-	const attributes: post = { ..._attributes, id };
+	const { attributes: _attributes, body } = fm<Omit<posts, 'id'>>(markdown);
+	const attributes: posts = { ..._attributes, id };
 
 	const html_raw = render_markdown(body);
 

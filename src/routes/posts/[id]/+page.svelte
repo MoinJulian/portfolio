@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Controls from '$lib/components/Controls.svelte';
+	import GoBack from '$lib/components/GoBack.svelte';
 
 	export let data;
 
@@ -10,7 +11,11 @@
 	$: published = data.attributes.published.toLocaleDateString();
 </script>
 
-<Controls variant="top" />
+<svelte:head>
+	<title>MoinJulian | {title}</title>
+</svelte:head>
+
+<Controls />
 
 <h1>
 	{title}
@@ -50,14 +55,7 @@
 	{@html html_code}
 </article>
 
-<Controls variant="bottom" />
-
 <style lang="scss">
-	@mixin bordered() {
-		border-radius: 0.4rem;
-		border: 0.15rem solid var(--code-border-color);
-	}
-
 	.dates {
 		margin-top: -0.5rem;
 		font-size: var(--small-font);
@@ -136,12 +134,13 @@
 		}
 
 		:global(pre) {
-			@include bordered();
+			border-radius: 0.4rem;
 			font-size: var(--small-font);
 			padding: 1rem;
 			margin-block: 1rem;
 			overflow: auto;
 			max-height: 30rem;
+			border: 0.15rem solid var(--code-border-color);
 			background-color: var(--code-bg-color);
 			tab-size: 4;
 
@@ -163,11 +162,6 @@
 			border-radius: 0.2rem;
 			font-size: var(--small-font);
 			white-space: nowrap;
-		}
-
-		:global(img) {
-			@include bordered();
-			margin-inline: auto;
 		}
 	}
 </style>

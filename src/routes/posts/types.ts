@@ -1,4 +1,4 @@
-export type post = {
+export type posts = {
 	id: string;
 	title: string;
 	published: Date;

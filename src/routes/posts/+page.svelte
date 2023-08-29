@@ -6,10 +6,10 @@
 </script>
 
 <svelte:head>
-	<title>MoinJulian - Blog</title>
+	<title>Blog with SvelteKit | Posts</title>
 </svelte:head>
 
-<h1>Blog</h1>
+<h1>Posts</h1>
 
 <p>Here you find thoughts and tutorials on web development.</p>
 

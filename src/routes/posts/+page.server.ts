@@ -1,8 +1,8 @@
-import { get_frontmatter } from '$lib/server/frontmatter';
-import type { post } from './types';
+import type { posts } from './types';
+import { get_frontmatter } from '$lib/server';
 
 export const load = async () => {
-	const unsorted_posts = get_frontmatter<post>(
+	const unsorted_posts = get_frontmatter<posts>(
 		import.meta.glob('/src/data/posts/**/*.md', {
 			as: 'raw',
 			eager: true
@@ -12,7 +12,7 @@ export const load = async () => {
 	const posts = [...unsorted_posts].sort((p, q) => q.published.getTime() - p.published.getTime());
 
 	const meta = {
-		title: 'MoinJulian - Blog',
+		title: 'Script Raccoon - Blog',
 		description: 'Some thoughts on web development'
 	};
 

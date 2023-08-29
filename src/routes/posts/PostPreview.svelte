@@ -1,14 +1,14 @@
 <script lang="ts">
-	import PreviewCard from "$lib/components/PreviewCard.svelte";
-	import type { post } from "./types";
+	import PreviewCard from '$lib/components/PreviewCard.svelte';
+	import type { posts } from './types';
 
-	export let post: post;
+	export let post: posts;
 
-	$: draft = post.id.startsWith("_draft");
+	$: draft = post.id.startsWith('_draft');
 </script>
 
 <li>
-	<PreviewCard href="/blog/{post.id}">
+	<PreviewCard href="/posts/{post.id}">
 		<h2 class:draft>
 			{post.title}
 		</h2>
@@ -32,7 +32,7 @@
 	.draft {
 		opacity: 0.5;
 		&::before {
-			content: "[Draft] ";
+			content: '[Draft] ';
 		}
 	}
 </style>
