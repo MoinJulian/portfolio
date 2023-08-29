@@ -14,6 +14,9 @@
 	Here you find more <a href="/about">about myself</a> and my
 	<a href="/projects">personal projects</a>.
 </p>
+<p>
+	The Blog can be found <a href="https://blog.moinjulian.com" target="_blank">here</a>.
+</p>
 
 <div class="img">
 	<img src={logo} alt="" />
