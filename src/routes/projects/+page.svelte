@@ -23,6 +23,7 @@
 
 <p>This is a selection of my favourite web applications I've developed.</p>
 
+<p>I currently got {projects.length} projects.</p>
 <Filter {tags} {years} />
 
 {#if filtered_projects.length > 0}

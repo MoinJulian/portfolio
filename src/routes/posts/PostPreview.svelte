@@ -13,7 +13,12 @@
 			{post.title}
 		</h2>
 		<div class="date">
-			{post.published.toLocaleDateString()}
+			Published: {post.published.toLocaleDateString()}
+		</div>
+		<div class="date">
+			{#if post.updated != undefined}
+				Updated: {post.updated?.toLocaleDateString()}
+			{/if}
 		</div>
 		<p>
 			{post.description}

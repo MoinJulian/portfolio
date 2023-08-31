@@ -1,6 +1,6 @@
 <script>
-	import { faYoutube, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
-	import { faGolfBallTee } from '@fortawesome/free-solid-svg-icons';
+	import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
+	import { faEnvelope, faGolfBallTee } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
 </script>
 
@@ -16,18 +16,13 @@
 		>
 	</li>
 	<li>
-		<a
-			title="Instagram"
-			aria-label="Instagram"
-			target="_blank"
-			href="https://www.instagram.com/julian_hammer_07/"><Fa icon={faInstagram} /></a
-		>
-	</li>
-	<li>
 		<a title="Golf Games" aria-label="Golf Games" target="_blank" href="https://golf.moinjulian.com"
 			><Fa icon={faGolfBallTee} /></a
 		>
 	</li>
+	<li><a href="mailto:jh@moinjulian.com" aria-label="Email">
+		<Fa icon={faEnvelope}></Fa>
+	</a></li>
 </ul>
 
 <style lang="scss">
