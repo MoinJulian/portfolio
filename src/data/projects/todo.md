@@ -3,7 +3,7 @@ name: Todo
 teaser: A Todo app made with SvelteKit and MongoDB
 repository: https://github.com/MoinJulian/todo-list
 url: https://todo.moinjulian.com/
-tags: ['todo', 'SvelteKit', 'MongoDB', 'TypeScript', 'SCSS', 'todo list']
+tags: ['todo', 'todo list', 'SvelteKit', 'TypeScript', 'SCSS', 'MongoDB', 'User Authentication']
 published: 2023-08-31
 updated: 2023-08-31
 ---
