@@ -10,7 +10,6 @@
 		faCircleQuestion,
 		faClipboardList,
 		faSection,
-		faKey,
 		faBlog
 	} from '@fortawesome/free-solid-svg-icons';
 
@@ -23,10 +22,9 @@
 	const links: link[] = [
 		{ name: 'YouTube', href: '/youtube', icon: faYoutube },
 		{ name: 'Projects', href: '/projects', icon: faClipboardList },
-		{ name: 'About', href: '/about', icon: faCircleQuestion },
 		{ name: 'Blog', href: '/posts', icon: faBlog },
-		{ name: 'Imprint', href: '/imprint', icon: faSection },
-		{ name: 'Personal', href: '/personal', icon: faKey }
+		{ name: 'About', href: '/about', icon: faCircleQuestion },
+		{ name: 'Imprint', href: '/imprint', icon: faSection }
 	];
 </script>
 
@@ -97,15 +95,9 @@
 		border-radius: 100vw;
 	}
 
-	li:not(.current) .name {
-		/* visually hidden */
-		position: absolute;
-		left: -100000px;
-	}
-
-	/* .name {
+	.name {
 		font-size: var(--small-font);
-	} */
+	}
 
 	@media (max-width: 38rem) {
 		nav {
