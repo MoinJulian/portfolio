@@ -5,7 +5,7 @@ repository: https://github.com/MoinJulian/Golf
 url: https://golf.moinjulian.com/
 tags: ['Game', 'Golf', 'SvelteKit', 'TypeScript', 'SCSS', 'MongoDB', 'User Authentication']
 published: 2023-07-08
-updated: 2023-08-29
+updated: 2023-09-01
 ---
 
 ## Description
