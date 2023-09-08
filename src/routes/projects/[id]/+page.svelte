@@ -96,6 +96,16 @@
 		{ label: 'Tutorial', href: tutorial }
 	].filter((link) => link.href?.length > 0);
 
+	function imageSourceExists(src: string): Promise<boolean> {
+		return fetch(src)
+			.then((response) => {
+				return response.status === 200;
+			})
+			.catch(() => {
+				return false;
+			});
+	}
+
 	const image_src = new URL(`../../../lib/assets/projects/${id}.webp`, import.meta.url).href;
 </script>
 
@@ -131,7 +141,13 @@
 </ul>
 
 <div class="image-container">
-	<img src={image_src} alt="screenshot of the project" loading="lazy" />
+	{#await imageSourceExists(image_src) then imageExists}
+		{#if imageExists}
+			<img src={image_src} alt="screenshot of the project" loading="lazy" />
+		{:else}
+			<!-- Image does not exist, do not display anything -->
+		{/if}
+	{/await}
 </div>
 
 <article>
