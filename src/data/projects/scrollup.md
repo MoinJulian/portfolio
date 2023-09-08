@@ -1,6 +1,6 @@
 ---
 name: ScrollUp
-teaser: A website with different Golf games
+teaser: Show casing a Scroll Up compoenet for Svelte and SvelteKit
 repository: https://github.com/MoinJulian/ScrollUp-Component
 tags: ['Scroll Up', 'Svelte', 'Component']
 published: 2023-09-08
