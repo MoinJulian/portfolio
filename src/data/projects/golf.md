@@ -3,7 +3,9 @@ name: Golf
 teaser: A website with different Golf games
 repository: https://github.com/MoinJulian/Golf
 url: https://golf.moinjulian.com/
-tags: ['Game', 'Golf', 'SvelteKit', 'TypeScript', 'SCSS', 'MongoDB', 'User Authentication']
+tags:
+  ['Game', 'Golf', 'SvelteKit', 'TypeScript', 'SCSS', 'MongoDB', 'User Authentication', 'Monorepo']
+pin: true
 published: 2023-07-08
 updated: 2023-09-07
 ---

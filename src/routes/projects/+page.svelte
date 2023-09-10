@@ -7,12 +7,14 @@
 	export let data;
 	const { projects, tags, years } = data;
 
-	$: filtered_projects = projects.filter(
-		(project) =>
-			$active_filter.tags.every((tag) => project.tags.includes(tag)) &&
-			($active_filter.years.length == 0 ||
-				$active_filter.years.includes(project.updated.getFullYear()))
-	);
+	$: filtered_projects = projects
+		.filter(
+			(project) =>
+				$active_filter.tags.every((tag) => project.tags.includes(tag)) &&
+				($active_filter.years.length === 0 ||
+					$active_filter.years.includes(project.updated.getFullYear()))
+		)
+		.sort((a, b) => (a.pin && !b.pin ? -1 : b.pin && !a.pin ? 1 : 0));
 </script>
 
 <svelte:head>

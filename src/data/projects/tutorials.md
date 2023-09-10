@@ -3,7 +3,8 @@ name: Tutorials
 teaser: A Page with a link to all my Tutorials I have done so far
 repository: https://github.com/MoinJulian/Tutorials
 url: https://tutorial.moinjulian.com/
-tags: ['Tutorials', 'SvelteKit','Svelte', 'TypeScript', 'SCSS', 'Monorepo']
+tags: ['Tutorials', 'SvelteKit', 'Svelte', 'TypeScript', 'SCSS', 'Monorepo']
+pin: false
 published: 2023-09-10
 updated: 2023-09-10
 ---

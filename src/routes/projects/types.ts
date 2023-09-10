@@ -5,6 +5,7 @@ export type project = {
 	url: string;
 	tutorial: string;
 	tags: string[];
+	pin: boolean;
 	teaser: string;
 	published: Date;
 	updated: Date;
