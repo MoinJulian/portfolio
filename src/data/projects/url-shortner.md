@@ -1,7 +1,7 @@
 ---
 name: URL Shortner
 teaser: A URL Shortner made with MongoDB and SvelteKit
-repository: https://github.com/MoinJulian/Url-Shortner
+repository: https://github.com/MoinJulian/Tutorials/tree/main/Url-Shortner
 url: https://url.moinjulian.com/
 tags: ['url', 'SvelteKit', 'TypeScript', 'SCSS', 'url shortner', 'MongoDB']
 published: 2023-08-11
