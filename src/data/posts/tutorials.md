@@ -28,3 +28,7 @@ I currently got 7 projects, which are:
   **Please note that this domain might be an Password Keeper later on**
 
 This are some example of my own projects the rest can be found under [Projects](/projects) or on [GitHub](https://github.com/moinjulian).
+
+## What is the idea of this Project?
+
+The idea of this project is to create an Repository where I can showcase all my Tutorials I have done, to display a wider range of techniques I'm not using in my own Projects, for Example Vue
