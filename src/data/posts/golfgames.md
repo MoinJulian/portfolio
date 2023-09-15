@@ -1,7 +1,7 @@
 ---
 title: Golf games
 published: 2023-08-10
-updated: 2023-09-04
+updated: 2023-09-15
 description: Some stuff about my Golf Games
 ---
 
