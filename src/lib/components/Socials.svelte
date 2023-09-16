@@ -16,7 +16,7 @@
 		>
 	</li>
 	<li>
-		<a title="Golf Games" aria-label="Golf Games" target="_blank" href="https://golf.moinjulian.com"
+		<a title="Golf Games" aria-label="Golf Games" href="/golf"
 			><Fa icon={faGolfBallTee} /></a
 		>
 	</li>
