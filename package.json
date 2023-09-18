@@ -14,7 +14,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.1.0",
 		"@sveltejs/kit": "^1.25.0",
-		"@types/he": "^1.2.0",
+		"@types/he": "^1.2.1",
 		"@types/markdown-it": "^13.0.1",
 		"@types/mathjax": "^0.0.37",
 		"prettier": "^2.8.0",
