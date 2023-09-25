@@ -10,7 +10,7 @@ This website containes all my projects, as well as Information about my YouTube 
 
 ### Netlify Deploy Status
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/90b925c5-deb1-4b38-b993-3b889d2c92f1/deploy-status)](https://app.netlify.com/sites/moinjulian/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3710d5e9-efd4-46a6-8baf-ab8c648fc419/deploy-status)](https://app.netlify.com/sites/moinjulian/deploys)
 
 ### Used API's
 
