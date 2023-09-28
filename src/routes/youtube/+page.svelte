@@ -63,8 +63,9 @@
 <h1>YouTube</h1>
 
 <p>
-	In 2021 I started my <a href="https://youtube.com/@moinjulian">YouTube channel</a> on web
-	development. Today the channel has <b>{subscriberCount}</b> subscribers and <b>{videoCount}</b>
+	In 2021 I started my <a href="https://youtube.com/@moinjulian" target="_blank">YouTube channel</a>
+	on web development. Today the channel has <b>{subscriberCount}</b> subscribers and
+	<b>{videoCount}</b>
 	published videos. All videos together are having <b>{viewCount}</b> views.
 </p>
 
