@@ -16,7 +16,7 @@
 		"@sveltejs/kit": "^1.27.3",
 		"@types/markdown-it": "^13.0.6",
 		"@types/he": "^1.2.3",
-		"@types/mathjax": "^0.0.39",
+		"@types/mathjax": "^0.0.40",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
 		"svelte": "^4.2.2",
