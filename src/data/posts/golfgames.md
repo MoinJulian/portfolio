@@ -13,13 +13,6 @@ Golf Games are all my games I've developed in the context of golf, the first ver
 
 I decided to develop Golf Games, because I love to play Golf and got an Handicap of 33.2, which is quite alright, I improved myself from 54, which is the start Handicap, to 36.6 in just one tournament, and then played a second one a few months later and improved to 34.5, then I played a third tournament and improved to 33.3, after one year of break playing tournaments, I played a fourth just a few weeks ago and got my current Handicap of **33.2**.
 
-## Versions
-
-There are two different versions of this game, the first version is the Server Version, which has a BackEnd and a user authentication, the second version is a full offline working version, the whole site is cached on the first load and can then be used without any network connection, so you can play the games on ships, planes or any where even if you don't have a network connection.
-
-[Server](https://golf.moinjulian.com)  
-[Offline](https://golf-offline.moinjulian.com)
-
 ## What is Golf games about?
 
 Golf Games (Golf) is about three different Games, the first one is called 4 Winning, the second one is called Exact, the third and for now last game is Precision
@@ -94,12 +87,6 @@ No, the project is not open source. However, you are still very welcome to contr
 
 Rest assured, we're committed to providing a steady stream of new updates and exciting features.
 Our team is dedicated to enhancing your experience, and you can expect frequent additions to keep the excitement alive.
-
-### Can I play the offline version on all devices?
-
-Absolutely! The offline version is designed to be accessible on a wide range of devices. It functions just like a website,
-and it's pre-rendered upon opening to ensure seamless functionality even when there's no network connectivity.
-This means you can enjoy the games on various devices without worrying about a network connection.
 
 ### What programming languages are used in the project?
 
