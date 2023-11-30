@@ -7,7 +7,7 @@ tags:
   ['Game', 'Golf', 'SvelteKit', 'TypeScript', 'SCSS', 'MongoDB', 'User Authentication', 'Monorepo']
 pin: true
 published: 2023-07-08
-updated: 2023-09-07
+updated: 2023-11-30
 ---
 
 ## Description
@@ -16,14 +16,6 @@ Welcome to "Golf Games" - your ultimate destination for golf fun and
 challenges! Discover two captivating golf games: "4Winning" and "Exact",
 guaranteed to put your skills to the test and take you on exciting
 adventures.
-
-## Versions
-
-There are two different versions of this game, the first version is the Server Version,
-which has a BackEnd and a user authentication, the second version is a full offline working
-version, the whole site is cached on the first load and can then be used without any network
-connection, so you can play the games on ships, planes or any where even if you don't have a
-network connection.
 
 ## Games
 
