@@ -1,7 +1,7 @@
 ---
 title: Golf games
 published: 2023-08-10
-updated: 2023-09-15
+updated: 2023-11-30
 description: Some stuff about my Golf Games
 ---
 
@@ -76,7 +76,7 @@ To report bugs, you can open an Issue on our [GitHub repository](https://github.
 label it with "bug." Alternatively, you can send an email to [info@moinjulian.com](mailto:info@moinjulian.com).
 
 To suggest new features, you can also open an issue on our [GitHub repository](https://github.com/MoinJulian/Golf/issues)
-and label it with "feature." You can also send your suggestions via email to [info@moinjulian.com](mailto:info@moinjulian.com).
+and select the feature template You can also send your suggestions via email to [info@moinjulian.com](mailto:info@moinjulian.com).
 
 ### Is the project open source?
 
