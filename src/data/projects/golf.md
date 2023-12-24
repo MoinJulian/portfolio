@@ -1,7 +1,7 @@
 ---
 name: Golf
 teaser: A website with different Golf games
-repository: https://github.com/realholf
+repository: https://github.com/realgolf
 url: https://golf.moinjulian.com/
 tags:
   ['Game', 'Golf', 'SvelteKit', 'TypeScript', 'SCSS', 'MongoDB', 'User Authentication', 'Monorepo']
