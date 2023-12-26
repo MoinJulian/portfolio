@@ -2,7 +2,7 @@
 name: Golf
 teaser: A website with different Golf games
 repository: https://github.com/realgolf
-url: https://golf.moinjulian.com/
+url: https://realgolf.games/
 tags:
   ['Game', 'Golf', 'SvelteKit', 'TypeScript', 'SCSS', 'MongoDB', 'User Authentication', 'Monorepo']
 pin: true
@@ -12,7 +12,7 @@ updated: 2023-11-30
 
 ## Description
 
-Welcome to "Golf Games" - your ultimate destination for golf fun and
+Welcome to "Real Golf" - your ultimate destination for golf fun and
 challenges! Discover two captivating golf games: "4Winning" and "Exact",
 guaranteed to put your skills to the test and take you on exciting
 adventures.
