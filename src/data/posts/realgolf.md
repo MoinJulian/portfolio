@@ -1,7 +1,7 @@
 ---
-title: Golf games
+title: Real Golf
 published: 2023-08-10
-updated: 2023-11-30
+updated: 2023-12-26
 description: Some stuff about my Real Golf
 ---
 
