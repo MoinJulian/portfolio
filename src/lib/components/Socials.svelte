@@ -16,13 +16,13 @@
 		>
 	</li>
 	<li>
-		<a title="Golf Games" aria-label="Golf Games" href="/golf"
-			><Fa icon={faGolfBallTee} /></a
-		>
+		<a title="Real Golf" aria-label="Real Golf" href="/golf"><Fa icon={faGolfBallTee} /></a>
 	</li>
-	<li><a href="mailto:jh@moinjulian.com" aria-label="Email">
-		<Fa icon={faEnvelope}></Fa>
-	</a></li>
+	<li>
+		<a href="mailto:jh@moinjulian.com" aria-label="Email">
+			<Fa icon={faEnvelope} />
+		</a>
+	</li>
 </ul>
 
 <style lang="scss">
