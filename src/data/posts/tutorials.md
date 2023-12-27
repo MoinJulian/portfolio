@@ -20,9 +20,11 @@ The most tutorials are made by [ScriptRaccoon](https://scriptraccoon.dev)
 
 All my own Projects can be found on [GitHub](https://github.com/moinjulian), or on this site at [Projects](/projects).
 
-I currently got 7 projects, which are:
+I currently got 7 projects, which are for example:
 
-- [Real Golf](https://realgolf.games)
+- Real Golf Games
+  - [GitHub Organisation](https://github.com/realgolf)
+  - [Website](https://realgolf.games)
 - [Todo](https://todo.moinjulian.com)
 - [Password generator](https://password.moinjulian.com)  
   **Please note that this domain might be an Password Keeper later on**
