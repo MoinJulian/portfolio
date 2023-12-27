@@ -9,7 +9,12 @@ export const load = async () => {
 		})
 	);
 
-	const posts = [...unsorted_posts].sort((p, q) => q.published.getTime() - p.published.getTime());
+	const posts = [...unsorted_posts].sort((p, q) => {
+		const qTime = q.updated ? q.updated.getTime() : q.published.getTime();
+		const pTime = p.updated ? p.updated.getTime() : p.published.getTime();
+
+		return qTime - pTime;
+	});
 
 	const meta = {
 		title: 'MoinJulian - Blog',
