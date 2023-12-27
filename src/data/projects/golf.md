@@ -12,7 +12,7 @@ updated: 2023-11-30
 
 ## Description
 
-Welcome to "Real Golf" - your ultimate destination for golf fun and
+Welcome to "Real Golf Games" - your ultimate destination for golf fun and
 challenges! Discover two captivating golf games: "4Winning" and "Exact",
 guaranteed to put your skills to the test and take you on exciting
 adventures.
