@@ -30,7 +30,7 @@
 		"@fortawesome/free-brands-svg-icons": "^6.5.1",
 		"@fortawesome/free-regular-svg-icons": "^6.5.1",
 		"@fortawesome/free-solid-svg-icons": "^6.5.1",
-		"dotenv": "^16.4.4",
+		"dotenv": "^16.4.5",
 		"front-matter": "^4.0.2",
 		"fs": "^0.0.1-security",
 		"he": "^1.2.0",
