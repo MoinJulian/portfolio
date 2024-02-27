@@ -1,5 +1,5 @@
 ---
-title: Abstracted Images
+name: Abstracted Images
 teaser: A JavaScript program to generate abstracte images
 repository: https://github.com/MoinJulian/abstracted-images
 tags: ["JavaScript", "2024", "Images"]
