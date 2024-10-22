@@ -1,59 +1,8 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+	export let data: PageData;
 
-	// Verwenden Sie import.meta.env, um auf Umgebungsvariablen zuzugreifen
-	const youtubeKey = import.meta.env.VITE_YOUTUBE_KEY;
-	const youtubeUser = import.meta.env.VITE_YOUTUBE_USER;
-
-	let subscriberCount: string = '';
-	let videoCount: string = '';
-	let viewCount: string = '';
-
-	let latestVideoTitle: string = '';
-	let latestVideoId: string = '';
-	let latestVideoThumbnailUrl: string = '';
-
-	async function getSubscribers(): Promise<void> {
-		try {
-			const response = await fetch(
-				`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeUser}&key=${youtubeKey}`
-			);
-			const data = await response.json();
-
-			console.log(data);
-
-			subscriberCount = data['items'][0].statistics.subscriberCount;
-			videoCount = data['items'][0].statistics.videoCount;
-			viewCount = data['items'][0].statistics.viewCount;
-		} catch (error) {
-			console.error(error);
-		}
-	}
-
-	async function getLatestVideo(): Promise<void> {
-		try {
-			const response = await fetch(
-				`https://www.googleapis.com/youtube/v3/search?key=${youtubeKey}&channelId=${youtubeUser}&part=snippet&order=date&sort=desc&maxResults=1`
-			);
-			const data = await response.json();
-
-			if (data.items.length > 0) {
-				const latestVideo = data.items[0];
-				latestVideoTitle = latestVideo.snippet.title;
-				latestVideoId = latestVideo.id.videoId;
-				latestVideoThumbnailUrl = latestVideo.snippet.thumbnails.default.url;
-			} else {
-				console.log('Keine Videos gefunden.');
-			}
-		} catch (error) {
-			console.error('Fehler beim Abrufen des neuesten Videos:', error);
-		}
-	}
-
-	onMount(() => {
-		getSubscribers();
-		getLatestVideo();
-	});
+	console.log(data);
 </script>
 
 <svelte:head>
@@ -64,20 +13,20 @@
 
 <p>
 	In 2021 I started my <a href="https://youtube.com/@moinjulian" target="_blank">YouTube channel</a>
-	on web development. Today the channel has <b>{subscriberCount}</b> subscribers and
-	<b>{videoCount}</b>
-	published videos. All videos together are having <b>{viewCount}</b> views.
+	on web development. Today the channel has <b>{data.subscriber_count}</b> subscribers and
+	<b>{data.video_count}</b>
+	published videos. All videos together are having <b>{data.view_count}</b> views.
 </p>
 
 <p>My latest video (in German):</p>
 
-{#if latestVideoId}
-	<h2>{latestVideoTitle}</h2>
+{#if data.latest_video_id}
+	<h2>{data.latest_video}</h2>
 	<!-- svelte-ignore a11y-missing-attribute -->
 	<iframe
 		width="280"
 		height="157.5"
-		src={`https://www.youtube.com/embed/${latestVideoId}`}
+		src={`https://www.youtube.com/embed/${data.latest_video_id}`}
 		frameborder="0"
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 		allowfullscreen
