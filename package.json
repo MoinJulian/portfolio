@@ -39,7 +39,7 @@
 		"marked": "^14.1.2",
 		"mathjax": "^3.2.2",
 		"sass": "^1.79.5",
-		"shiki": "^1.9.0",
+		"shiki": "^1.22.1",
 		"svelte-fa": "^4.0.2"
 	},
 	"packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
