@@ -1,9 +1,9 @@
 <!-- @migration-task Error while migrating Svelte code: Identifier 'project' has already been declared -->
 <script lang="ts">
-	import { fade } from 'svelte/transition';
-	import type { project } from './types';
 	import PreviewCard from '$lib/components/PreviewCard.svelte';
-	export let project: project;
+	import { fade } from 'svelte/transition';
+	import type { project } from './types.ts';
+	const { project: projectData }: { project: project } = $props();
 
 	function imageSourceExists(src: string): Promise<boolean> {
 		return fetch(src)
@@ -15,18 +15,20 @@
 			});
 	}
 
-	const image_src = new URL(`../../lib/assets/projects/${project.id}_thumb.webp`, import.meta.url)
-		.href;
+	const image_src = new URL(
+		`../../lib/assets/projects/${projectData.id}_thumb.webp`,
+		import.meta.url
+	).href;
 </script>
 
 <li transition:fade={{ duration: 200 }}>
-	<PreviewCard href="../projects/{project.id}">
+	<PreviewCard href="../projects/{projectData.id}">
 		<div class="grid">
 			<div>
-				<h2>{project.name}</h2>
-				<div class="teaser">{project.teaser}</div>
-				<div class="date">Updated: {project.updated.toLocaleDateString()}</div>
-				<div class="date">Published: {project.published.toLocaleDateString()}</div>
+				<h2>{projectData.name}</h2>
+				<div class="teaser">{projectData.teaser}</div>
+				<div class="date">Updated: {projectData.updated.toLocaleDateString()}</div>
+				<div class="date">Published: {projectData.published.toLocaleDateString()}</div>
 				<div class="more">More...</div>
 			</div>
 			<div class="image-container">
