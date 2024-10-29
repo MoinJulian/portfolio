@@ -1,7 +1,11 @@
 <script lang="ts">
 	import CopyURL from './CopyURL.svelte';
 	import GoBack from './GoBack.svelte';
-	export let variant = 'top';
+	interface Props {
+		variant?: string;
+	}
+
+	let { variant = 'top' }: Props = $props();
 </script>
 
 <div class={variant}>

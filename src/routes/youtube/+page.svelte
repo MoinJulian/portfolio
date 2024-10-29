@@ -1,6 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>
@@ -20,7 +24,7 @@
 
 {#if data.latest_video_id}
 	<h2>{data.latest_video}</h2>
-	<!-- svelte-ignore a11y-missing-attribute -->
+	<!-- svelte-ignore a11y_missing_attribute -->
 	<iframe
 		width="280"
 		height="157.5"
@@ -28,7 +32,7 @@
 		frameborder="0"
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 		allowfullscreen
-	/>
+	></iframe>
 {:else}
 	<p>No videos found.</p>
 {/if}

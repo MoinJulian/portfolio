@@ -1,9 +1,13 @@
 <script lang="ts">
 	import { active_filter, filters_expanded } from './stores';
-	export let tags: string[];
-	export let years: number[];
-	let focussed_tag: string | null = null;
-	let focussed_year: number | null = null;
+	interface Props {
+		tags: string[];
+		years: number[];
+	}
+
+	let { tags, years }: Props = $props();
+	let focussed_tag: string | null = $state(null);
+	let focussed_year: number | null = $state(null);
 </script>
 
 <section aria-label="Filters">
@@ -15,8 +19,8 @@
 					class="tag"
 					class:selected={$active_filter.tags.includes(tag)}
 					class:focus={focussed_tag === tag}
-					on:focusin={() => (focussed_tag = tag)}
-					on:focusout={() => (focussed_tag = null)}
+					onfocusin={() => (focussed_tag = tag)}
+					onfocusout={() => (focussed_tag = null)}
 				>
 					<input
 						type="checkbox"
@@ -32,8 +36,8 @@
 					class="tag"
 					class:selected={$active_filter.years.includes(year)}
 					class:focus={focussed_year === year}
-					on:focusin={() => (focussed_year = year)}
-					on:focusout={() => (focussed_year = null)}
+					onfocusin={() => (focussed_year = year)}
+					onfocusout={() => (focussed_year = null)}
 				>
 					<input
 						type="checkbox"

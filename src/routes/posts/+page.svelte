@@ -1,7 +1,7 @@
 <script lang="ts">
 	import PostPreview from './PostPreview.svelte';
 
-	export let data;
+	let { data } = $props();
 	const { posts } = data;
 </script>
 

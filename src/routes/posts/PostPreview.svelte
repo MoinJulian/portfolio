@@ -2,9 +2,13 @@
 	import PreviewCard from '$lib/components/PreviewCard.svelte';
 	import type { posts } from './types';
 
-	export let post: posts;
+	interface Props {
+		post: posts;
+	}
 
-	$: draft = post.id.startsWith('_draft');
+	let { post }: Props = $props();
+
+	let draft = $derived(post.id.startsWith('_draft'));
 </script>
 
 <li>

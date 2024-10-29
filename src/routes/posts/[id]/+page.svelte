@@ -2,13 +2,13 @@
 	import Controls from '$lib/components/Controls.svelte';
 	import GoBack from '$lib/components/GoBack.svelte';
 
-	export let data;
+	let { data } = $props();
 
-	$: toc = data.toc;
-	$: html_code = data.html_code;
-	$: title = data.attributes.title;
-	$: updated = data.attributes.updated?.toLocaleDateString();
-	$: published = data.attributes.published.toLocaleDateString();
+	let toc = $derived(data.toc);
+	let html_code = $derived(data.html_code);
+	let title = $derived(data.attributes.title);
+	let updated = $derived(data.attributes.updated?.toLocaleDateString());
+	let published = $derived(data.attributes.published.toLocaleDateString());
 </script>
 
 <svelte:head>

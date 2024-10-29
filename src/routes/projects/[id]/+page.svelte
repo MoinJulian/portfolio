@@ -80,7 +80,7 @@
 <script lang="ts">
 	import GoBack from '$lib/components/GoBack.svelte';
 
-	export let data;
+	let { data } = $props();
 
 	const {
 		attributes: { name, url, repository, tutorial, published, updated, tags, id },

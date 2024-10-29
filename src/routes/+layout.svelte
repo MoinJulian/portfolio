@@ -3,6 +3,11 @@
 	import LoadProgress from '$lib/components/LoadProgress.svelte';
 	import ScrollUp from '$lib/components/ScrollUp.svelte';
 	import './app.css';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <svelte:head>
@@ -16,7 +21,7 @@
 	<Nav />
 
 	<main>
-		<slot />
+		{@render children?.()}
 	</main>
 </div>
 

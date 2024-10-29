@@ -1,3 +1,4 @@
+<!-- @migration-task Error while migrating Svelte code: Identifier 'project' has already been declared -->
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import type { project } from './types';

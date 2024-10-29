@@ -3,7 +3,7 @@
 	import Fa from 'svelte-fa';
 	import { faRetweet } from '@fortawesome/free-solid-svg-icons';
 
-	let pending = false;
+	let pending = $state(false);
 
 	async function copy_url() {
 		if (pending) return;
@@ -16,7 +16,7 @@
 	}
 </script>
 
-<button on:click={copy_url} aria-label="copy URL to clipboard" aria-live="polite">
+<button onclick={copy_url} aria-label="copy URL to clipboard" aria-live="polite">
 	<Fa icon={faRetweet} />
 	{#if pending}
 		<span class="message"> Copied URL </span>
