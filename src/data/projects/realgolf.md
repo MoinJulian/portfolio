@@ -1,13 +1,13 @@
 ---
 name: Real Golf Games
 teaser: A website with different Golf games
-repository: https://github.com/realgolf
+repository: https://github.com/realgolfgames
 url: https://realgolf.games/
 tags:
-  ['Game', 'Golf', 'SvelteKit', 'TypeScript', 'SCSS', 'MongoDB', 'User Authentication', 'active']
+  ['Games', 'Golf', 'SvelteKit', 'TypeScript', 'SCSS', 'MongoDB', 'User Authentication', 'active']
 pin: true
 published: 2023-07-08
-updated: 2024-02-27
+updated: 2024-10-29
 ---
 
 ## Description
@@ -43,8 +43,6 @@ target, you will receive a deduction of one point. The winner of the game is
 the player with the highest points at the end. The game concludes when only
 one player has points remaining. You can observe the distance you need to
 shoot and the current team, along with the remaining points for each team.
-
-**You can find way more information on the GitHub Organisation as well as the [realgolf/web](https://github.com/realgolf/web) repo.**
 
 ## Copyright
 
