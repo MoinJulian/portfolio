@@ -33,8 +33,8 @@ importers:
         specifier: ^14.1.0
         version: 14.1.0
       marked:
-        specifier: ^14.1.4
-        version: 14.1.4
+        specifier: ^15.0.2
+        version: 15.0.2
       mathjax:
         specifier: ^3.2.2
         version: 3.2.2
@@ -696,8 +696,8 @@ packages:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
     hasBin: true
 
-  marked@14.1.4:
-    resolution: {integrity: sha512-vkVZ8ONmUdPnjCKc5uTRvmkRbx4EAi2OkTOXmfTDhZz3OFqMNBM1oTTWwTr4HY4uAEojhzPf+Fy8F1DWa3Sndg==}
+  marked@15.0.2:
+    resolution: {integrity: sha512-85RUkoYKIVB21PbMKrnD6aCl9ws+XKEyhJNMbLn206NyD3jbBo7Ec7Wi4Jrsn4dV1a2ng7K/jfkmIN0DNoS41w==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -1431,7 +1431,7 @@ snapshots:
       punycode.js: 2.3.1
       uc.micro: 2.1.0
 
-  marked@14.1.4: {}
+  marked@15.0.2: {}
 
   mathjax@3.2.2: {}
 
