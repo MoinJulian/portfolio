@@ -50,10 +50,10 @@ importers:
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^3.3.1
-        version: 3.3.1(@sveltejs/kit@2.15.0(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))
+        version: 3.3.1(@sveltejs/kit@2.15.3(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))
       '@sveltejs/kit':
-        specifier: ^2.15.0
-        version: 2.15.0(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))(svelte@5.2.7)(vite@5.4.11(sass@1.80.6))
+        specifier: ^2.15.3
+        version: 2.15.3(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))(svelte@5.2.7)(vite@5.4.11(sass@1.80.6))
       '@sveltejs/vite-plugin-svelte':
         specifier: ^4.0.0
         version: 4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6))
@@ -455,8 +455,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
-  '@sveltejs/kit@2.15.0':
-    resolution: {integrity: sha512-FI1bhfhFNGI2sKg+BhiRyM4eaOvX+KZqRYSQqL5PK3ZZREX2xufZ6MzZAw79N846OnIxYNqcz/3VOUq+FPDd3w==}
+  '@sveltejs/kit@2.15.3':
+    resolution: {integrity: sha512-yI1iF1ldC+nyMFuA1cV+IMOROaGu6ogW0WNlTuPU5/3tGk8pQlwOtlbguGY4Fsp8Qf6pQWmG/ZUXRDrhAt62dg==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -604,8 +604,8 @@ packages:
   esm-env@1.0.0:
     resolution: {integrity: sha512-Cf6VksWPsTuW01vU9Mk/3vRue91Zevka5SjyNf3nEpokFRuqt/KjUQoGAwq9qMmhpLTHmXzSIrFRw8zxWzmFBA==}
 
-  esm-env@1.2.1:
-    resolution: {integrity: sha512-U9JedYYjCnadUlXk7e1Kr+aENQhtUaoaV9+gZm1T8LC/YBAPJx3NSPIAurFOC0U5vrdSevnUJS2/wUVxGwPhng==}
+  esm-env@1.2.2:
+    resolution: {integrity: sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==}
 
   esprima@4.0.1:
     resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
@@ -1182,18 +1182,18 @@ snapshots:
 
   '@shikijs/vscode-textmate@9.3.0': {}
 
-  '@sveltejs/adapter-auto@3.3.1(@sveltejs/kit@2.15.0(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))':
+  '@sveltejs/adapter-auto@3.3.1(@sveltejs/kit@2.15.3(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))':
     dependencies:
-      '@sveltejs/kit': 2.15.0(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))(svelte@5.2.7)(vite@5.4.11(sass@1.80.6))
+      '@sveltejs/kit': 2.15.3(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))(svelte@5.2.7)(vite@5.4.11(sass@1.80.6))
       import-meta-resolve: 4.1.0
 
-  '@sveltejs/kit@2.15.0(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))(svelte@5.2.7)(vite@5.4.11(sass@1.80.6))':
+  '@sveltejs/kit@2.15.3(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6)))(svelte@5.2.7)(vite@5.4.11(sass@1.80.6))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 4.0.0(svelte@5.2.7)(vite@5.4.11(sass@1.80.6))
       '@types/cookie': 0.6.0
       cookie: 0.6.0
       devalue: 5.1.1
-      esm-env: 1.2.1
+      esm-env: 1.2.2
       import-meta-resolve: 4.1.0
       kleur: 4.1.5
       magic-string: 0.30.12
@@ -1340,7 +1340,7 @@ snapshots:
 
   esm-env@1.0.0: {}
 
-  esm-env@1.2.1: {}
+  esm-env@1.2.2: {}
 
   esprima@4.0.1: {}
 
