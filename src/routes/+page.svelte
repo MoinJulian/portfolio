@@ -1,10 +1,10 @@
 <script lang="ts">
+  import ProjectCard from '$lib/components/portfolio/ProjectCard.svelte';
   import SectionContainer from '$lib/components/portfolio/SectionContainer.svelte';
   import SectionHeading from '$lib/components/portfolio/SectionHeading.svelte';
-  import ProjectCard from '$lib/components/portfolio/ProjectCard.svelte';
   import TimelineItem from '$lib/components/portfolio/TimelineItem.svelte';
-  import { projects } from '$lib/data/projects';
   import { experience } from '$lib/data/experience';
+  import { projects } from '$lib/data/projects';
   import { skillGroups } from '$lib/data/skills';
 </script>
 
@@ -34,7 +34,7 @@
     <div class="animate-fade-in">
       <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm px-3 py-1.5 rounded-full font-mono mb-8">
         <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
-        Available for new projects
+        Building Swingalytica
       </div>
     </div>
 
@@ -46,7 +46,7 @@
 
     <p class="animate-slide-up text-lg sm:text-xl text-gray-400 max-w-xl leading-relaxed mb-10" style="animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards;">
       Building scalable web applications with modern technologies.
-      Passionate about clean code, great DX, and pixel-perfect UIs.
+      Passionate about clean code, great DX/UX, and innovative solutions.
     </p>
 
     <div class="animate-slide-up flex flex-wrap gap-4" style="animation-delay: 0.3s; opacity: 0; animation-fill-mode: forwards;">
@@ -60,16 +60,6 @@
           <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
         </svg>
         GitHub
-      </a>
-      <a
-        href="#contact"
-        onclick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}
-        class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-500 transition-colors duration-200 text-sm"
-      >
-        Get in touch
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-        </svg>
       </a>
     </div>
 
@@ -100,7 +90,7 @@
         After discovering <span class="text-indigo-400">Svelte</span> and <span class="text-indigo-400">SvelteKit</span>, I dove deep into the modern web ecosystem — TypeScript, TailwindCSS, databases, and DevOps. Today I build full-stack applications that are fast, accessible, and maintainable.
       </p>
       <p>
-        I'm currently studying A-Levels in Computer Science, Mathematics, and Physics in England, while taking on freelance projects and contributing to open source on the side.
+        I'm currently studying A-Levels in Computer Science, Mathematics, and Economics in England, while building Swingalytica.
       </p>
     </div>
 
@@ -155,7 +145,7 @@
   <SectionHeading
     label="03 / experience"
     title="Experience & Education"
-    subtitle="My journey so far — from school to freelancing and open source."
+    subtitle="My journey so far — from school to building Swingalytica."
   />
 
   <div>
@@ -165,71 +155,10 @@
   </div>
 </SectionContainer>
 
-<!-- ========== CONTACT ========== -->
-<SectionContainer id="contact" class="border-t border-[#1f1f23]">
-  <SectionHeading
-    label="04 / contact"
-    title="Let's work together"
-    subtitle="Have a project in mind or just want to chat? Feel free to reach out."
-  />
-
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-    <div class="space-y-6">
-      <p class="text-gray-400 leading-relaxed">
-        I'm currently available for <span class="text-white">freelance projects</span> and <span class="text-white">collaborations</span>. Whether it's a full web application, a developer tool, or consulting — I'd love to hear about it.
-      </p>
-      <div class="space-y-4">
-        <a
-          href="mailto:contact@moinjulian.com"
-          class="group flex items-center gap-4 p-4 bg-[#111113] border border-[#1f1f23] rounded-xl hover:border-indigo-500/50 transition-all duration-200"
-        >
-          <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="text-sm text-gray-500">Email</div>
-            <div class="text-white group-hover:text-indigo-300 transition-colors duration-200">contact@moinjulian.com</div>
-          </div>
-        </a>
-        <a
-          href="https://github.com/MoinJulian"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group flex items-center gap-4 p-4 bg-[#111113] border border-[#1f1f23] rounded-xl hover:border-indigo-500/50 transition-all duration-200"
-        >
-          <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="text-sm text-gray-500">GitHub</div>
-            <div class="text-white group-hover:text-indigo-300 transition-colors duration-200">MoinJulian</div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="hidden lg:flex items-center justify-center">
-      <div class="relative">
-        <div class="w-48 h-48 rounded-full bg-indigo-500/5 border border-indigo-500/10 flex items-center justify-center">
-          <div class="w-32 h-32 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
-            <span class="text-6xl font-bold text-indigo-400 font-mono">J</span>
-          </div>
-        </div>
-        <div class="absolute -top-3 -right-3 w-6 h-6 rounded-full bg-indigo-500 animate-ping opacity-30"></div>
-        <div class="absolute -bottom-3 -left-3 w-4 h-4 rounded-full bg-indigo-500/50 animate-ping opacity-30" style="animation-delay: 0.5s"></div>
-      </div>
-    </div>
-  </div>
-</SectionContainer>
-
 <!-- Footer -->
 <footer class="border-t border-[#1f1f23] py-8 px-4 sm:px-6 lg:px-8">
   <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
-    <span class="font-mono">julian<span class="text-indigo-400">.</span>dev</span>
+    <span class="font-mono">moinjulian<span class="text-indigo-400">.</span>com</span>
     <span>Built with SvelteKit + TypeScript + TailwindCSS</span>
     <a href="/imprint" class="hover:text-gray-400 transition-colors">Imprint</a>
   </div>

@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { page } from '$app/stores';
 
   let scrolled = $state(false);
   let mobileOpen = $state(false);
@@ -8,7 +7,6 @@
     { label: 'About', href: '#about' },
     { label: 'Projects', href: '#projects' },
     { label: 'Experience', href: '#experience' },
-    { label: 'Contact', href: '#contact' },
   ];
 
   $effect(() => {
@@ -42,7 +40,7 @@
       href="/"
       class="text-white font-bold text-lg tracking-tight hover:text-indigo-400 transition-colors duration-200 font-mono"
     >
-      julian<span class="text-indigo-400">.</span>dev
+      moinjulian<span class="text-indigo-400">.</span>com
     </a>
 
     <!-- Desktop nav -->

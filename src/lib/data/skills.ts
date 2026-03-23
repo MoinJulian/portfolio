@@ -6,14 +6,14 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
   {
     category: 'Frontend',
-    skills: ['SvelteKit', 'Svelte', 'TypeScript', 'TailwindCSS', 'HTML5', 'CSS3', 'JavaScript', 'Vite', 'Figma'],
+    skills: ['SvelteKit', 'Svelte', 'TypeScript', 'TailwindCSS', 'HTML5', 'CSS3', 'JavaScript', 'Vite'],
   },
   {
     category: 'Backend',
-    skills: ['Node.js', 'Go', 'Python', 'PostgreSQL', 'SQLite', 'Redis', 'REST APIs', 'GraphQL'],
+    skills: ['Node.js', 'Python', 'PostgreSQL', 'Redis', 'REST APIs', 'GraphQL', 'MongoDB', 'Supabase'],
   },
   {
     category: 'DevOps & Tools',
-    skills: ['Docker', 'Git', 'GitHub Actions', 'CI/CD', 'Linux', 'Vercel', 'Netlify', 'Cloudflare'],
+    skills: ['Docker', 'Git', 'GitHub Actions', 'CI/CD', 'Linux', 'Vercel', 'Netlify', 'Render', 'n8n'],
   },
 ];
