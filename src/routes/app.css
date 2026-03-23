@@ -1,50 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
-	--small-font: 1rem;
-	--medium-font: 1.125rem;
-	--tiny-font: 0.8rem;
+  --small-font: 1rem;
+  --medium-font: 1.125rem;
+  --tiny-font: 0.8rem;
 }
 
 body[data-theme='light'] {
-	/* LIGHT COLORS */
-	--bg-color: #fff;
-	--font-color: #000;
-	--secondary-font-color: #555;
-	--inverted-font-color: #fff;
-	--border-color: #ddd;
-	--shadow-color: #ccc;
-	--accent-color: #003a4c;
-	--tag-color: #eef0f2;
-	--tag-font-color: var(--secondary-font-color);
-	--code-border-color: transparent;
-	--code-bg-color: #222;
-	--inline-code-color: var(--secondary-font-color);
-	--h2-color: var(--accent-color);
-	--shadow-color: #ccc;
+  --bg-color: #fff;
+  --font-color: #000;
+  --secondary-font-color: #555;
+  --inverted-font-color: #fff;
+  --border-color: #ddd;
+  --shadow-color: #ccc;
+  --accent-color: #003a4c;
+  --tag-color: #eef0f2;
+  --tag-font-color: var(--secondary-font-color);
+  --code-border-color: transparent;
+  --code-bg-color: #222;
+  --inline-code-color: var(--secondary-font-color);
+  --h2-color: var(--accent-color);
 }
 
 body[data-theme='dark'] {
-	/* DARK COLORS */
-	--bg-color: #222223;
-	--font-color: #fff;
-	--secondary-font-color: #999;
-	--inverted-font-color: #fff;
-	--border-color: #333;
-	--shadow-color: transparent;
-	--accent-color: #d14613;
-	--tag-color: #404040;
-	--tag-font-color: var(--inverted-font-color);
-	--code-border-color: var(--border-color);
-	--code-bg-color: #111;
-	--inline-code-color: #333;
-	--h2-color: skyblue;
-	--shadow-color: transparent;
+  --bg-color: #222223;
+  --font-color: #fff;
+  --secondary-font-color: #999;
+  --inverted-font-color: #fff;
+  --border-color: #333;
+  --shadow-color: transparent;
+  --accent-color: #d14613;
+  --tag-color: #404040;
+  --tag-font-color: var(--inverted-font-color);
+  --code-border-color: var(--border-color);
+  --code-bg-color: #111;
+  --inline-code-color: #333;
+  --h2-color: skyblue;
 }
 
 body {

@@ -1,31 +1,79 @@
-# Portfolio
+# Julian's Developer Portfolio
 
-## Website
+A modern, high-performance developer portfolio built with **SvelteKit**, **TypeScript**, and **TailwindCSS**.
 
-[MoinJulian.com](https://moinjulian.com)
+## Features
 
-## Containes
+- 🌑 Dark mode by default
+- ⚡ Fast loading with SvelteKit
+- 📱 Fully responsive (mobile-first)
+- 🎨 Clean design inspired by Vercel / linear.app
+- 🔍 SEO-friendly with OpenGraph meta tags
+- ✨ Subtle animations and microinteractions
+- ♿ Accessible HTML with ARIA attributes
 
-This website containes all my projects, as well as Information about my YouTube channel and a Personal site, with my CV in English and German and a list of my Skills, you also can find something about me and way's how you can contact me.
+## Sections
 
-### Netlify Deploy Status
+1. **Hero** – Name, tagline, CTA buttons
+2. **About** – Introduction + skills overview (Frontend, Backend, DevOps)
+3. **Projects** – Project cards with tech stack and links
+4. **Experience** – Timeline of jobs, education, and open source
+5. **Contact** – Email and social links
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3710d5e9-efd4-46a6-8baf-ab8c648fc419/deploy-status)](https://app.netlify.com/sites/moinjulian/deploys)
+## Stack
 
-### Used API's
+- [SvelteKit](https://kit.svelte.dev/) – Full-stack web framework
+- [TypeScript](https://www.typescriptlang.org/) – Type safety
+- [TailwindCSS](https://tailwindcss.com/) – Utility-first styling
+- [Vite](https://vitejs.dev/) – Build tool
 
-- YouTube Data API v3
+## Getting Started
 
-### Used Packages
+### Prerequisites
 
-- SvelteKit
-- Sass
-- TypeScript
-- Shiki
-- He
+- [Node.js](https://nodejs.org/) 18+
+- [pnpm](https://pnpm.io/) 9+
 
-## Copyright
+### Install & Run
 
-The Site is Copyright under the MIT License
+```bash
+pnpm install
+pnpm dev
+```
 
-[MIT](/LICENSE)
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build for production
+
+```bash
+pnpm build
+pnpm preview
+```
+
+## Project Structure
+
+```
+src/
+├── lib/
+│   ├── components/
+│   │   └── portfolio/     # New portfolio components
+│   │       ├── Navbar.svelte
+│   │       ├── SectionContainer.svelte
+│   │       ├── SectionHeading.svelte
+│   │       ├── ProjectCard.svelte
+│   │       └── TimelineItem.svelte
+│   └── data/              # Typed data files
+│       ├── projects.ts
+│       ├── experience.ts
+│       └── skills.ts
+└── routes/
+    └── +page.svelte       # Main portfolio page (single-page layout)
+```
+
+## Customization
+
+Edit the data files in `src/lib/data/` to update your projects, experience, and skills.
+
+## License
+
+MIT
