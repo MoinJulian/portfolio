@@ -167,7 +167,9 @@
 				{#if imageExists}
 					<img src={image_src} alt="screenshot of the project" loading="lazy" />
 				{:else}
-					<div class="rounded-2xl border border-dashed border-[#2a2a32] p-10 text-center text-gray-500">
+					<div
+						class="rounded-2xl border border-dashed border-[#2a2a32] p-10 text-center text-gray-500"
+					>
 						Preview image coming soon.
 					</div>
 				{/if}

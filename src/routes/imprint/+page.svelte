@@ -26,10 +26,10 @@
 		<section class="surface-panel portfolio-prose">
 			<h2>According to § 5 TMG (German Telemedia Law)</h2>
 			<p>
-				As a service provider, we are responsible for our own content on these pages according
-				to Section 7, Paragraph 1 of the German Telemedia Act (TMG). According to §§ 8 to 10
-				TMG, however, we are not obliged to monitor transmitted or stored third-party
-				information or investigate circumstances that indicate illegal activity.
+				As a service provider, we are responsible for our own content on these pages according to
+				Section 7, Paragraph 1 of the German Telemedia Act (TMG). According to §§ 8 to 10 TMG,
+				however, we are not obliged to monitor transmitted or stored third-party information or
+				investigate circumstances that indicate illegal activity.
 			</p>
 			<p>
 				Obligations to remove or block the use of information according to general laws remain
@@ -43,31 +43,29 @@
 
 			<h2>Liability for links</h2>
 			<p>
-				Our offer contains links to external websites over which we have no influence.
-				Therefore we cannot assume any liability for this external content. The respective
-				provider or operator of the pages is always responsible for the content of the linked
-				pages.
+				Our offer contains links to external websites over which we have no influence. Therefore we
+				cannot assume any liability for this external content. The respective provider or operator
+				of the pages is always responsible for the content of the linked pages.
 			</p>
 			<p>
-				The linked pages were checked for possible legal violations at the time of linking.
-				Illegal content was not recognizable at the time of linking. A permanent control of the
-				content of the linked pages is not reasonable without concrete evidence of an
-				infringement. As soon as we become aware of legal violations, we will remove such links
-				immediately.
+				The linked pages were checked for possible legal violations at the time of linking. Illegal
+				content was not recognizable at the time of linking. A permanent control of the content of
+				the linked pages is not reasonable without concrete evidence of an infringement. As soon as
+				we become aware of legal violations, we will remove such links immediately.
 			</p>
 
 			<h2>Copyright</h2>
 			<p>
 				The content and works on these pages created by the site operators are subject to German
-				copyright law. Duplication, editing, distribution and any kind of exploitation outside
-				the limits of copyright require the written consent of the respective author or creator.
+				copyright law. Duplication, editing, distribution and any kind of exploitation outside the
+				limits of copyright require the written consent of the respective author or creator.
 				Downloads and copies of this site are only permitted for private, non-commercial use.
 			</p>
 			<p>
-				Insofar as the content on this site was not created by the operator, the copyrights of
-				third parties are observed. Should you nevertheless become aware of a copyright
-				infringement, we ask that you inform us accordingly. As soon as we become aware of legal
-				violations, we will remove such content immediately.
+				Insofar as the content on this site was not created by the operator, the copyrights of third
+				parties are observed. Should you nevertheless become aware of a copyright infringement, we
+				ask that you inform us accordingly. As soon as we become aware of legal violations, we will
+				remove such content immediately.
 			</p>
 			<p>Copyright © 2023 MoinJulian</p>
 			<p>Germany 04.07.23</p>

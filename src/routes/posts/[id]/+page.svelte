@@ -17,7 +17,7 @@
 
 <PageShell
 	label="Article"
-	title={title}
+	{title}
 	description={data.attributes.description}
 	contentClass="grid gap-8 xl:grid-cols-[280px_minmax(0,1fr)]"
 >

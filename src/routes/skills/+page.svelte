@@ -18,8 +18,8 @@
 			<h2 class="mt-3 text-2xl font-semibold text-white">Product-minded full-stack development</h2>
 			<div class="mt-4 space-y-4 text-gray-400">
 				<p>
-					I enjoy building web products from first idea to deployment, which means thinking
-					about architecture, UI, performance, accessibility, and developer workflow together.
+					I enjoy building web products from first idea to deployment, which means thinking about
+					architecture, UI, performance, accessibility, and developer workflow together.
 				</p>
 				<p>
 					My strongest day-to-day tools are around modern TypeScript applications, with enough
