@@ -24,11 +24,23 @@
 <li transition:fade={{ duration: 200 }}>
 	<PreviewCard href="../projects/{projectData.id}">
 		<div class="grid">
-			<div>
-				<h2>{projectData.name}</h2>
-				<div class="teaser">{projectData.teaser}</div>
-				<div class="date">Updated: {projectData.updated.toLocaleDateString()}</div>
-				<div class="date">Published: {projectData.published.toLocaleDateString()}</div>
+			<div class="space-y-4">
+				<div class="flex flex-wrap items-center gap-2">
+					{#if projectData.pin}
+						<span class="chip accent">Featured</span>
+					{/if}
+					<span class="chip">Updated {projectData.updated.toLocaleDateString()}</span>
+					<span class="chip">Published {projectData.published.toLocaleDateString()}</span>
+				</div>
+				<div>
+					<h2>{projectData.name}</h2>
+					<div class="teaser">{projectData.teaser}</div>
+				</div>
+				<div class="tags">
+					{#each projectData.tags as tag}
+						<span class="chip">{tag}</span>
+					{/each}
+				</div>
 				<div class="more">More...</div>
 			</div>
 			<div class="image-container">
@@ -47,24 +59,40 @@
 <style>
 	.grid {
 		display: grid;
-		grid-template-columns: 3fr 2fr;
 		align-items: center;
-		gap: 0.25rem;
+		gap: 1.5rem;
+	}
+
+	h2 {
+		margin: 0;
+		font-size: 1.4rem;
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
 	}
 
 	.teaser {
 		color: var(--secondary-font-color);
-		margin-bottom: 0.5rem;
-	}
-
-	.date {
-		color: var(--secondary-font-color);
-		font-size: var(--tiny-font);
-		margin-bottom: 0rem;
+		margin-top: 0.75rem;
 	}
 
 	.image-container {
 		display: flex;
 		justify-content: center;
+	}
+
+	img {
+		width: 100%;
+		border-radius: 1rem;
+		border: 1px solid var(--border-color);
+	}
+
+	@media (min-width: 52rem) {
+		.grid {
+			grid-template-columns: minmax(0, 1.5fr) minmax(220px, 1fr);
+		}
 	}
 </style>

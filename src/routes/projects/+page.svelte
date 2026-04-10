@@ -1,4 +1,5 @@
 <script lang="ts">
+	import PageShell from '$lib/components/portfolio/PageShell.svelte';
 	import { fade } from 'svelte/transition';
 	import Filter from './Filter.svelte';
 	import { active_filter } from './stores';
@@ -21,25 +22,27 @@
 	<title>MoinJulian - Projects</title>
 </svelte:head>
 
-<h1>Projects</h1>
+<PageShell
+	label="Projects"
+	title="A growing archive of products, experiments, and shipped ideas."
+	description="From polished applications to smaller experiments, this is where I collect the work I am most proud of."
+>
+	<div class="mb-6 flex flex-wrap gap-3">
+		<span class="chip accent">{projects.length} total projects</span>
+		<span class="chip">{filtered_projects.length} shown</span>
+	</div>
 
-<p>This is a selection of my favourite web applications I've developed.</p>
+	<Filter {tags} {years} />
 
-<p>I currently got {projects.length} projects.</p>
-<Filter {tags} {years} />
-
-{#if filtered_projects.length > 0}
-	<ol class="no-bullets">
-		{#each filtered_projects as project (project.id)}
-			<ProjectPreview {project} />
-		{/each}
-	</ol>
-{:else}
-	<p in:fade={{ duration: 200, delay: 200 }}>No projects within this filter</p>
-{/if}
-
-<style>
-	ol {
-		margin-top: 1rem;
-	}
-</style>
+	{#if filtered_projects.length > 0}
+		<ol class="no-bullets mt-6 grid gap-5">
+			{#each filtered_projects as project (project.id)}
+				<ProjectPreview {project} />
+			{/each}
+		</ol>
+	{:else}
+		<div class="surface-panel mt-6 text-gray-400" in:fade={{ duration: 200, delay: 200 }}>
+			No projects within this filter.
+		</div>
+	{/if}
+</PageShell>

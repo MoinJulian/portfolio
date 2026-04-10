@@ -1,31 +1,54 @@
+<script lang="ts">
+	import PageShell from '$lib/components/portfolio/PageShell.svelte';
+</script>
+
 <svelte:head>
-    <title>MoinJulian - About</title>
+	<title>MoinJulian - About</title>
 </svelte:head>
 
-<h1>About</h1>
+<PageShell
+	label="About"
+	title="Building on curiosity, consistency, and a love for the web."
+	description="I moved from Germany to England, adapted to a new education system, and kept building software the whole way through."
+>
+	<div class="grid gap-6 lg:grid-cols-2">
+		<section class="surface-panel">
+			<p class="text-sm font-mono uppercase tracking-[0.3em] text-indigo-300">Background</p>
+			<h2 class="mt-3 text-2xl font-semibold text-white">From Germany to England</h2>
+			<div class="mt-4 space-y-4 text-gray-400">
+				<p>
+					Before moving to England, I attended school in Germany for nine years. Midway
+					through Year 9, I decided to continue my education abroad and repeat the year so I
+					could properly improve my English.
+				</p>
+				<p>
+					After arriving in England in 2022, I quickly settled into the new environment and
+					realised how much I enjoyed the experience. That decision shaped both my studies and
+					the way I approach growth: be uncomfortable, learn fast, and keep moving.
+				</p>
+			</div>
+		</section>
 
-<h2>About my self</h2>
-
-<p>
-	Before commencing my studies in England, I attended a school in Germany for nine years, from Year
-	1 to Year 9. In the English education system, this corresponds to Years 2 to 10. During the middle
-	of my ninth year in Germany, I made the decision to pursue my education in England. Due to my
-	inadequate proficiency in English and my will to keep improving my English skills, I chose to
-	repeat the year. Following the summer holidays in 2022, I arrived in England in Year 10 to retake
-	the school year and enhance my English skills. As the first term concluded around Christmas time,
-	I decided to continue my studies in England as I found the experience immensely enjoyable.
-</p>
-
-<h2>Programming</h2>
-
-<p>
-	I began my programming journey approximately two years ago, initially focusing on HTML and CSS as
-	part of my school curriculum. However, after a few weeks, I developed a keen interest in learning
-	JavaScript. My motivation behind this decision was to acquire the ability to create interactive
-	websites through coding. This pivotal moment occurred around the middle of 2022. After several
-	months of learning JavaScript and writing my first program in JavaScript, I also came across
-	Svelte, which is a JavaScript framework that allows component-based programming. Once I delved
-	into learning Svelte for a few weeks, I discovered SvelteKit, which is an extension of Svelte and
-	serves as a full-stack framework. See <a href="/skills">Skills</a> for a more complete list of my developing
-	skills.
-</p>
+		<section class="surface-panel">
+			<p class="text-sm font-mono uppercase tracking-[0.3em] text-indigo-300">Programming</p>
+			<h2 class="mt-3 text-2xl font-semibold text-white">Started with the basics, stayed for the craft.</h2>
+			<div class="mt-4 space-y-4 text-gray-400">
+				<p>
+					I began programming through HTML and CSS at school, but it did not take long before
+					JavaScript pulled me in. The idea of making websites interactive turned into a much
+					deeper interest in how the web works end to end.
+				</p>
+				<p>
+					Discovering Svelte and later SvelteKit gave me the framework I wanted: fast,
+					component-driven, and enjoyable to build with. Since then I have focused on writing
+					clean, maintainable applications with a strong emphasis on UX and developer
+					experience.
+				</p>
+				<p>
+					For a fuller overview of the tools I use regularly, head over to the
+					<a href="/skills">skills page</a>.
+				</p>
+			</div>
+		</section>
+	</div>
+</PageShell>

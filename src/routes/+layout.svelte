@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Footer from '$lib/components/portfolio/Footer.svelte';
   import Navbar from '$lib/components/portfolio/Navbar.svelte';
   import LoadProgress from '$lib/components/LoadProgress.svelte';
   import './app.css';
@@ -18,9 +19,10 @@
 
 <LoadProgress />
 
-<div class="min-h-screen bg-[#0a0a0b] text-white">
+<div class="min-h-screen bg-[#0a0a0b] text-white flex flex-col">
   <Navbar />
-  <main>
+  <main class="flex-1">
     {@render children?.()}
   </main>
+  <Footer />
 </div>

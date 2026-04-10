@@ -154,12 +154,3 @@
     {/each}
   </div>
 </SectionContainer>
-
-<!-- Footer -->
-<footer class="border-t border-[#1f1f23] py-8 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
-    <span class="font-mono">moinjulian<span class="text-indigo-400">.</span>com</span>
-    <span>Built with SvelteKit + TypeScript + TailwindCSS</span>
-    <a href="/imprint" class="hover:text-gray-400 transition-colors">Imprint</a>
-  </div>
-</footer>

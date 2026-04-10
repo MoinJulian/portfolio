@@ -1,31 +1,28 @@
 <script lang="ts">
+  import { page } from '$app/stores';
 
   let scrolled = $state(false);
   let mobileOpen = $state(false);
 
   const navLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Experience', href: '#experience' },
+    { label: 'Home', href: '/' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Blog', href: '/posts' },
+    { label: 'About', href: '/about' },
+    { label: 'Skills', href: '/skills' },
   ];
 
   $effect(() => {
     function onScroll() {
       scrolled = window.scrollY > 20;
     }
+    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   });
 
-  function scrollToSection(e: MouseEvent, href: string) {
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      mobileOpen = false;
-      const el = document.querySelector(href);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
+  function isActive(href: string) {
+    return href === '/' ? $page.url.pathname === href : $page.url.pathname.startsWith(href);
   }
 </script>
 
@@ -44,15 +41,16 @@
     </a>
 
     <!-- Desktop nav -->
-    <div class="hidden md:flex items-center gap-1">
-      {#each navLinks as link}
-        <a
-          href={link.href}
-          onclick={(e) => scrollToSection(e, link.href)}
-          class="px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
-        >
-          {link.label}
-        </a>
+      <div class="hidden md:flex items-center gap-1">
+        {#each navLinks as link}
+          <a
+            href={link.href}
+            class="px-4 py-2 text-sm rounded-lg transition-all duration-200 {isActive(link.href)
+              ? 'bg-white/8 text-white'
+              : 'text-gray-400 hover:text-white hover:bg-white/5'}"
+          >
+            {link.label}
+          </a>
       {/each}
       <a
         href="https://github.com/MoinJulian"
@@ -89,8 +87,10 @@
       {#each navLinks as link}
         <a
           href={link.href}
-          onclick={(e) => scrollToSection(e, link.href)}
-          class="block px-3 py-3 text-gray-400 hover:text-white transition-colors duration-200 border-b border-[#1f1f23] last:border-0"
+          onclick={() => (mobileOpen = false)}
+          class="block px-3 py-3 transition-colors duration-200 border-b border-[#1f1f23] last:border-0 {isActive(link.href)
+            ? 'text-white'
+            : 'text-gray-400 hover:text-white'}"
         >
           {link.label}
         </a>

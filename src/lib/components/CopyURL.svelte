@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import Fa from 'svelte-fa';
-	import { faRetweet } from '@fortawesome/free-solid-svg-icons';
+	import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 	let pending = $state(false);
 
@@ -17,24 +17,28 @@
 </script>
 
 <button onclick={copy_url} aria-label="copy URL to clipboard" aria-live="polite">
-	<Fa icon={faRetweet} />
-	{#if pending}
-		<span class="message"> Copied URL </span>
-	{/if}
+	<Fa icon={faLink} />
+	<span>{pending ? 'Copied URL' : 'Copy URL'}</span>
 </button>
 
 <style>
 	button {
-		position: relative;
-	}
-	.message {
-		background-color: var(--bg-color);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		padding: 0.65rem 1rem;
+		border-radius: 999px;
 		border: 1px solid var(--border-color);
-		padding: 0.25rem;
-		border-radius: 0.25rem;
-		white-space: nowrap;
-		position: absolute;
-		top: -0.25rem;
-		right: 0;
+		background: #111113;
+		font-size: 0.95rem;
+		color: #e5e7eb;
+		transition:
+			border-color 150ms ease,
+			transform 150ms ease;
+	}
+
+	button:hover {
+		border-color: rgba(129, 140, 248, 0.35);
+		transform: translateY(-1px);
 	}
 </style>

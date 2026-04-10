@@ -20,7 +20,11 @@ export const load = async (event: { params: { id: any; }; }) => {
 
 	const markdown = projects_record[path];
 	const { attributes: _attributes, body } = fm<Omit<project, 'id'>>(markdown);
-	const attributes: project = { ..._attributes, id };
+	const attributes: project = {
+		..._attributes,
+		id,
+		tags: [...(_attributes.tags ?? [])]
+	};
 
 	attributes.tags.sort();
 

@@ -13,29 +13,23 @@
 
 <li>
 	<PreviewCard href="/posts/{post.id}">
-		<h2 class:draft>
-			{post.title}
-		</h2>
-		<div class="date">
-			Published: {post.published.toLocaleDateString()}
-		</div>
-		<div class="date">
+		<div class="flex flex-wrap items-center gap-2">
+			<span class="chip">Published {post.published.toLocaleDateString()}</span>
 			{#if post.updated != undefined}
-				Updated: {post.updated?.toLocaleDateString()}
+				<span class="chip">Updated {post.updated?.toLocaleDateString()}</span>
 			{/if}
 		</div>
-		<p>
-			{post.description}
-		</p>
+		<h2 class:draft>{post.title}</h2>
+		<p>{post.description}</p>
 		<div class="more">More...</div>
 	</PreviewCard>
 </li>
 
 <style lang="scss">
-	.date {
-		color: var(--secondary-font-color);
-		font-size: var(--small-font);
-		margin-bottom: 0.5rem;
+	h2 {
+		margin: 0;
+		font-size: 1.4rem;
+		color: white;
 	}
 
 	.draft {
@@ -43,5 +37,9 @@
 		&::before {
 			content: '[Draft] ';
 		}
+	}
+
+	p {
+		color: var(--secondary-font-color);
 	}
 </style>

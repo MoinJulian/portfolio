@@ -78,17 +78,19 @@
 </style> -->
 
 <script lang="ts">
+	import Controls from '$lib/components/Controls.svelte';
+	import PageShell from '$lib/components/portfolio/PageShell.svelte';
 	import GoBack from '$lib/components/GoBack.svelte';
 
 	let { data } = $props();
 
 	const {
-		attributes: { name, url, repository, tutorial, published, updated, tags, id },
+		attributes: { name, teaser, url, repository, tutorial, published, updated, tags, id },
 		html_code
 	} = data;
 
-	let publish_date = published.toLocaleDateString();
-	let update_date = updated.toLocaleDateString();
+	let publish_date = published?.toLocaleDateString?.() ?? published;
+	let update_date = updated?.toLocaleDateString?.() ?? updated;
 
 	const links = [
 		{ label: 'URL', href: url },
@@ -113,123 +115,67 @@
 	<title>MoinJulian | {name}</title>
 </svelte:head>
 
-<GoBack />
+<PageShell
+	label="Project"
+	title={name}
+	description={teaser}
+	contentClass="grid gap-8 xl:grid-cols-[280px_minmax(0,1fr)]"
+>
+	<aside class="space-y-6 xl:sticky xl:top-24 xl:self-start">
+		<div class="surface-panel space-y-5">
+			<Controls />
+			<div class="space-y-3 text-sm text-gray-400">
+				<div>
+					<div class="font-mono uppercase tracking-[0.25em] text-xs text-gray-500">Published</div>
+					<div class="mt-1 text-base text-white">{publish_date}</div>
+				</div>
+				{#if updated}
+					<div>
+						<div class="font-mono uppercase tracking-[0.25em] text-xs text-gray-500">Updated</div>
+						<div class="mt-1 text-base text-white">{update_date}</div>
+					</div>
+				{/if}
+			</div>
 
-<h1>
-	{name}
-</h1>
+			{#if links.length > 0}
+				<div>
+					<div class="font-mono uppercase tracking-[0.25em] text-xs text-gray-500">Links</div>
+					<div class="mt-3 flex flex-wrap gap-2">
+						{#each links as { href, label }}
+							<a class="chip accent" {href} target="_blank" rel="noopener noreferrer">{label}</a>
+						{/each}
+					</div>
+				</div>
+			{/if}
 
-<div class="dates">
-	<div>Published: {publish_date}</div>
-	{#if updated}
-		<div>Updated: {update_date}</div>
-	{/if}
-</div>
+			{#if tags.length > 0}
+				<div>
+					<div class="font-mono uppercase tracking-[0.25em] text-xs text-gray-500">Tags</div>
+					<div class="mt-3 flex flex-wrap gap-2">
+						{#each tags as tag}
+							<span class="chip">{tag}</span>
+						{/each}
+					</div>
+				</div>
+			{/if}
+		</div>
+	</aside>
 
-<section aria-label="links" class="links">
-	{#each links as { href, label }}
-		<a {href} target="_blank">{label}</a>
-	{/each}
-</section>
+	<div class="space-y-6">
+		<div class="surface-panel overflow-hidden">
+			{#await imageSourceExists(image_src) then imageExists}
+				{#if imageExists}
+					<img src={image_src} alt="screenshot of the project" loading="lazy" />
+				{:else}
+					<div class="rounded-2xl border border-dashed border-[#2a2a32] p-10 text-center text-gray-500">
+						Preview image coming soon.
+					</div>
+				{/if}
+			{/await}
+		</div>
 
-<ul class="no-bullets tag-list" aria-label="list of tags">
-	{#each tags as tag}
-		<li class="tag">
-			{tag}
-		</li>
-	{/each}
-</ul>
-
-<div class="image-container">
-	{#await imageSourceExists(image_src) then imageExists}
-		{#if imageExists}
-			<img src={image_src} alt="screenshot of the project" loading="lazy" />
-		{:else}
-			<!-- Image does not exist, do not display anything -->
-		{/if}
-	{/await}
-</div>
-
-<article>
-	{@html html_code}
-</article>
-
-<style lang="scss">
-	.dates {
-		margin-top: -0.5rem;
-		font-size: var(--small-font);
-		color: var(--secondary-font-color);
-		margin-top: 0.5rem;
-	}
-
-	article {
-		:global(h2) {
-			padding-top: 5rem;
-			margin-top: -3.5rem;
-		}
-
-		:global(blockquote) {
-			margin-block: 1rem;
-			margin-left: 1rem;
-			padding-left: 0.5rem;
-			color: var(--secondary-font-color);
-			font-size: var(--small-font);
-			border-left: 0.2rem solid var(--border-color);
-			line-height: 1.6;
-		}
-
-		:global(pre) {
-			border-radius: 0.4rem;
-			font-size: var(--small-font);
-			padding: 1rem;
-			margin-block: 1rem;
-			overflow: auto;
-			max-height: 30rem;
-			border: 0.15rem solid var(--code-border-color);
-			background-color: var(--code-bg-color);
-			tab-size: 4;
-
-			scrollbar-width: thin;
-			&::-webkit-scrollbar {
-				width: 0.4rem;
-				height: 0.4rem;
-			}
-			&::-webkit-scrollbar-thumb {
-				background-color: var(--secondary-font-color);
-			}
-		}
-
-		:global(code:not(pre code)) {
-			font-family: monospace;
-			background-color: var(--inline-code-bg-color);
-			padding-inline: 0.5rem;
-			padding-block: 0.05rem;
-			border-radius: 0.2rem;
-			font-size: var(--small-font);
-			white-space: nowrap;
-		}
-	}
-
-	img {
-		margin-block: 1.5rem;
-	}
-
-	.links {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		font-size: var(--small-font);
-		margin-top: 1.5rem;
-	}
-
-	.tag-list {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		margin-top: 1.5rem;
-	}
-
-	.image-container {
-		border-bottom: 1px solid var(--border-color);
-	}
-</style>
+		<article class="surface-panel portfolio-prose">
+			{@html html_code}
+		</article>
+	</div>
+</PageShell>

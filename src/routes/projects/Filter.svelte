@@ -11,12 +11,17 @@
 </script>
 
 <section aria-label="Filters">
-	<details bind:open={$filters_expanded}>
-		<summary>Filters</summary>
+	<details bind:open={$filters_expanded} class="surface-panel">
+		<summary class="flex items-center justify-between gap-4 text-sm font-medium text-white">
+			<span>Filter projects</span>
+			<span class="text-xs font-mono text-gray-500">
+				{$active_filter.tags.length + $active_filter.years.length} active
+			</span>
+		</summary>
 		<div class="filter-list">
 			{#each tags as tag}
 				<label
-					class="tag"
+					class="chip"
 					class:selected={$active_filter.tags.includes(tag)}
 					class:focus={focussed_tag === tag}
 					onfocusin={() => (focussed_tag = tag)}
@@ -33,7 +38,7 @@
 			{/each}
 			{#each years as year}
 				<label
-					class="tag"
+					class="chip"
 					class:selected={$active_filter.years.includes(year)}
 					class:focus={focussed_year === year}
 					onfocusin={() => (focussed_year = year)}
@@ -57,13 +62,18 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.5rem;
-		margin-block: 1rem;
+		margin-top: 1rem;
 	}
 	label {
 		cursor: pointer;
+		transition:
+			border-color 150ms ease,
+			background-color 150ms ease,
+			color 150ms ease;
 		&.selected {
-			background-color: var(--accent-color);
-			color: var(--inverted-font-color);
+			border-color: rgba(129, 140, 248, 0.35);
+			background-color: rgba(129, 140, 248, 0.14);
+			color: #c7d2fe;
 		}
 		&.focus {
 			outline: 0.1rem solid var(--accent-color);
