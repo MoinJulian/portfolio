@@ -16,10 +16,10 @@
 <style>
 	div {
 		display: flex;
-		justify-content: space-between;
-		color: var(--secondary-font-color);
+		flex-wrap: wrap;
+		gap: 0.75rem;
 	}
 	div.bottom {
-		margin-block: 1rem 2rem;
+		margin-block: 1rem 0;
 	}
 </style>

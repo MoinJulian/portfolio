@@ -1,66 +1,64 @@
+@import 'tailwindcss/index.css';
+@config '../../tailwind.config.ts';
+@source '../**/*.{html,js,svelte,ts}';
+
+:root,
+body[data-theme='light'],
+body[data-theme='dark'] {
+	--bg-color: #0a0a0b;
+	--font-color: #f9fafb;
+	--secondary-font-color: #9ca3af;
+	--inverted-font-color: #0a0a0b;
+	--border-color: #1f1f23;
+	--shadow-color: rgba(15, 23, 42, 0.3);
+	--accent-color: #818cf8;
+	--tag-color: #15151a;
+	--tag-font-color: #d1d5db;
+	--code-border-color: #27272a;
+	--code-bg-color: #0f172a;
+	--inline-code-bg-color: rgba(129, 140, 248, 0.12);
+	--inline-code-color: #c7d2fe;
+	--h2-color: #f9fafb;
+	--surface-color: rgba(17, 17, 19, 0.92);
+}
+
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
 
-:root {
+body {
 	--small-font: 1rem;
 	--medium-font: 1.125rem;
 	--tiny-font: 0.8rem;
-}
-
-body[data-theme='light'] {
-	/* LIGHT COLORS */
-	--bg-color: #fff;
-	--font-color: #000;
-	--secondary-font-color: #555;
-	--inverted-font-color: #fff;
-	--border-color: #ddd;
-	--shadow-color: #ccc;
-	--accent-color: #003a4c;
-	--tag-color: #eef0f2;
-	--tag-font-color: var(--secondary-font-color);
-	--code-border-color: transparent;
-	--code-bg-color: #222;
-	--inline-code-color: var(--secondary-font-color);
-	--h2-color: var(--accent-color);
-	--shadow-color: #ccc;
-}
-
-body[data-theme='dark'] {
-	/* DARK COLORS */
-	--bg-color: #222223;
-	--font-color: #fff;
-	--secondary-font-color: #999;
-	--inverted-font-color: #fff;
-	--border-color: #333;
-	--shadow-color: transparent;
-	--accent-color: #d14613;
-	--tag-color: #404040;
-	--tag-font-color: var(--inverted-font-color);
-	--code-border-color: var(--border-color);
-	--code-bg-color: #111;
-	--inline-code-color: #333;
-	--h2-color: skyblue;
-	--shadow-color: transparent;
-}
-
-body {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family:
+		'Inter',
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		sans-serif;
 	line-height: 1.5;
 	overflow-y: scroll;
 	font-size: var(--medium-font);
 	background-color: var(--bg-color);
 	color: var(--font-color);
+	background-image:
+		radial-gradient(circle at top, rgba(99, 102, 241, 0.14), transparent 30%),
+		linear-gradient(to right, rgba(31, 31, 35, 0.18) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(31, 31, 35, 0.18) 1px, transparent 1px);
+	background-size:
+		auto,
+		72px 72px,
+		72px 72px;
+	background-attachment: fixed;
+	-webkit-font-smoothing: antialiased;
 }
 
 a {
 	color: inherit;
-	text-underline-offset: 0.1rem;
 	outline-color: var(--accent-color);
+	text-decoration: none;
 }
 
 p {
@@ -117,6 +115,114 @@ button {
 img {
 	display: block;
 	max-width: 100%;
+}
+
+main {
+	position: relative;
+}
+
+.surface-panel {
+	border: 1px solid var(--border-color);
+	background: var(--surface-color);
+	border-radius: 1rem;
+	padding: 1.5rem;
+	backdrop-filter: blur(16px);
+	box-shadow: 0 20px 60px rgba(2, 6, 23, 0.22);
+}
+
+.chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.45rem 0.9rem;
+	border-radius: 999px;
+	border: 1px solid #2a2a32;
+	background: #15151a;
+	color: #d1d5db;
+	font-size: 0.875rem;
+}
+
+.chip.accent {
+	border-color: rgba(129, 140, 248, 0.3);
+	background: rgba(129, 140, 248, 0.1);
+	color: #c7d2fe;
+}
+
+.portfolio-prose {
+	color: #d1d5db;
+	line-height: 1.8;
+}
+
+.portfolio-prose > :first-child {
+	margin-top: 0;
+}
+
+.portfolio-prose > :last-child {
+	margin-bottom: 0;
+}
+
+.portfolio-prose h2,
+.portfolio-prose h3,
+.portfolio-prose h4 {
+	color: #f9fafb;
+	scroll-margin-top: 6rem;
+}
+
+.portfolio-prose h2 {
+	margin-top: 3rem;
+	font-size: 1.6rem;
+}
+
+.portfolio-prose h3 {
+	margin-top: 2rem;
+	font-size: 1.2rem;
+}
+
+.portfolio-prose a {
+	color: #a5b4fc;
+	text-decoration: underline;
+	text-underline-offset: 0.2rem;
+}
+
+.portfolio-prose blockquote {
+	margin: 1.5rem 0;
+	border-left: 3px solid rgba(129, 140, 248, 0.4);
+	padding-left: 1rem;
+	color: #9ca3af;
+}
+
+.portfolio-prose pre {
+	margin: 1.5rem 0;
+	max-width: 100%;
+	overflow-x: auto;
+	border: 1px solid var(--code-border-color);
+	border-radius: 0.9rem;
+	padding: 1rem;
+	background: var(--code-bg-color);
+	font-size: 0.95rem;
+	scrollbar-width: thin;
+}
+
+.portfolio-prose pre::-webkit-scrollbar {
+	height: 0.45rem;
+}
+
+.portfolio-prose pre::-webkit-scrollbar-thumb {
+	background: #6b7280;
+	border-radius: 999px;
+}
+
+.portfolio-prose code:not(pre code) {
+	padding: 0.15rem 0.45rem;
+	border-radius: 0.4rem;
+	background: var(--inline-code-bg-color);
+	color: var(--inline-code-color);
+	font-size: 0.95em;
+}
+
+.portfolio-prose img {
+	border-radius: 1rem;
+	border: 1px solid var(--border-color);
 }
 
 .visually-hidden {

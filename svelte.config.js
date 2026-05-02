@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-netlify';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -9,14 +9,10 @@ const config = {
 		adapter: adapter(),
 
 		prerender: {
+			handleMissingId: 'ignore',
 			handleHttpError: ({ status, path, message }) => {
 				if (status === 500) {
 					console.error(`Error during prerendering: ${message}`);
-					// Return a custom error page for 500 errors
-					return {
-						status: 500,
-						html: '<p>An internal server error occurred. Please try again later.</p>'
-					};
 				}
 			}
 		}
