@@ -1,4 +1,6 @@
-@layer theme, base, components, utilities;
+@import 'tailwindcss/index.css';
+@config '../../tailwind.config.ts';
+@source '../**/*.{html,js,svelte,ts}';
 
 :root,
 body[data-theme='light'],
