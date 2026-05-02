@@ -26,5 +26,13 @@ export const projects: Project[] = [
     live: 'https://swingalytica.com',
     featured: true,
   },
-  
+  {
+    id: 'gust',
+    title: 'Gust',
+    description: 'Golf Games written in Rust',
+    tech: ['Rust', 'WASM'],
+    github: 'https://github.com/swingalytica/gust',
+    live: "https://www.npmjs.com/package/@swingalytica/gust",
+    featured: true,
+  }
 ];

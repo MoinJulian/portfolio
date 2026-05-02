@@ -13,6 +13,10 @@ export const skillGroups: SkillGroup[] = [
     skills: ['Node.js', 'Python', 'PostgreSQL', 'Redis', 'REST APIs', 'GraphQL', 'MongoDB', 'Supabase'],
   },
   {
+    category: 'Programming Languages',
+    skills: ['TypeScript', 'JavaScript', 'Python', 'Rust', 'SQL', 'Bash'],
+  },
+  {
     category: 'DevOps & Tools',
     skills: ['Docker', 'Git', 'GitHub Actions', 'CI/CD', 'Linux', 'Vercel', 'Netlify', 'Render', 'n8n'],
   },

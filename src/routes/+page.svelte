@@ -42,7 +42,7 @@
 >
 	<!-- Background grid -->
 	<div
-		class="absolute inset-0 bg-[linear-gradient(to_right,#1f1f2305_1px,transparent_1px),linear-gradient(to_bottom,#1f1f2305_1px,transparent_1px)] bg-[size:72px_72px]"
+		class="absolute inset-0 bg-[linear-gradient(to_right,#1f1f2305_1px,transparent_1px),linear-gradient(to_bottom,#1f1f2305_1px,transparent_1px)] bg-size-[7s2px_72px]"
 		aria-hidden="true"
 	></div>
 	<!-- Glow -->
@@ -86,7 +86,7 @@
 				href="https://github.com/MoinJulian"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-medium rounded-xl hover:bg-gray-100 transition-colors duration-200 text-sm"
+				class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black! font-medium rounded-xl hover:bg-gray-100 transition-colors duration-200 text-sm"
 			>
 				<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 					<path
@@ -128,7 +128,14 @@
 				After discovering <span class="text-indigo-400">Svelte</span> and
 				<span class="text-indigo-400">SvelteKit</span>, I dove deep into the modern web ecosystem —
 				TypeScript, TailwindCSS, databases, and DevOps. Today I build full-stack applications that
-				are fast, accessible, and maintainable.
+				are fast, accessible, and maintainable. Most recently, I've been focused on building
+				<a
+					href="https://github.com/swingalytica/gust"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-indigo-400 hover:underline transition-colors duration-200"
+				>Gust</a>
+				, using Rust.
 			</p>
 			<p>
 				I'm currently studying A-Levels in Computer Science, Mathematics, and Economics in England,
