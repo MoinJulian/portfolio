@@ -11,7 +11,6 @@
 
 		<nav class="flex flex-wrap items-center gap-4" aria-label="Footer">
 			<a class="transition-colors hover:text-white" href="/projects">Projects</a>
-			<a class="transition-colors hover:text-white" href="/posts">Blog</a>
 			<a class="transition-colors hover:text-white" href="/about">About</a>
 			<a class="transition-colors hover:text-white" href="/imprint">Imprint</a>
 		</nav>
