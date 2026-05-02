@@ -9,8 +9,7 @@
 	import {
 		faCircleQuestion,
 		faClipboardList,
-		faSection,
-		faBlog
+		faSection
 	} from '@fortawesome/free-solid-svg-icons';
 
 	type link = {
@@ -22,7 +21,6 @@
 	const links: link[] = [
 		{ name: 'YouTube', href: '/youtube', icon: faYoutube },
 		{ name: 'Projects', href: '/projects', icon: faClipboardList },
-		{ name: 'Blog', href: '/posts', icon: faBlog },
 		{ name: 'About', href: '/about', icon: faCircleQuestion },
 		{ name: 'Imprint', href: '/imprint', icon: faSection }
 	];
